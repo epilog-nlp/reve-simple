@@ -4,7 +4,7 @@
     <TargetFrameworks>net47;net471;net472;netcoreapp2.0;netcoreapp2.1;netcoreapp2.2;netstandard2.0</TargetFrameworks>
     <LangVersion>7.1</LangVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.0-alpha</Version>
+    <Version>1.0.0</Version>
     <Authors>Ian Schlarman</Authors>
     <Copyright>Copyright ©2019 Ian Schlarman</Copyright>
     <Description>Contains all implementations used by the consolidated Rule Evaluation Engine validation framework.</Description>
@@ -48,12 +48,10 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="REvE.Simple.Validation.Contracts" Version="1.0.0" />
     <PackageReference Include="System.ComponentModel.Composition" Version="4.5.0" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\REvE.Simple.Validation.Contracts\REvE.Simple.Validation.Contracts.csproj" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta-63127-02" PrivateAssets="All" />
   </ItemGroup>
 
 </Project>
