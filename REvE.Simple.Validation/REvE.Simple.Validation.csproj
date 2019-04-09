@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net47;net471;net472;netcoreapp2.0;netcoreapp2.1;netcoreapp2.2;netstandard2.0</TargetFrameworks>
+    <LangVersion>7.1</LangVersion>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.0-alpha</Version>
+    <Authors>Ian Schlarman</Authors>
+    <Copyright>Copyright ©2019 Ian Schlarman</Copyright>
+    <Description>Contains all implementations used by the consolidated Rule Evaluation Engine validation framework.</Description>
+    <PackageTags>REvE RuleEvaluationEngine RuleEngine REvESimple REvEConsolidated REvEImplementation ValidationFramework</PackageTags>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PackageReleaseNotes>Added GitHub source code references, Repository Information, and SourceLink support.</PackageReleaseNotes>
+    <PackageProjectUrl>https://github.com/kaylerich/reve-common</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/kaylerich/reve-simple.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="rules-sample.json" />
+    <None Remove="rules-sample.xml" />
+    <None Remove="validations-sample.json" />
+    <None Remove="validations-sample.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="rules-sample.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="rules-sample.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="validations-sample.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="validations-sample.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.ComponentModel.Composition" Version="4.5.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\REvE.Simple.Validation.Contracts\REvE.Simple.Validation.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>
